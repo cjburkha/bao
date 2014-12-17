@@ -5,10 +5,11 @@ package com.cjb.model;
  */
 public class BoardSide {
 
-    BoardRow frontRow;
-    BoardRow backRow;
+    public BoardRow frontRow;
+    public BoardRow backRow;
 
-    public BoardSide() {
-        //frontRow =
+    public BoardSide(boolean beginnerMode) {
+        this.frontRow = new BoardRow(true,beginnerMode);
+        this.backRow = new BoardRow(false,beginnerMode);
     }
 }
