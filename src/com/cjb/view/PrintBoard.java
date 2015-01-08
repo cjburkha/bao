@@ -26,10 +26,10 @@ public class PrintBoard {
             topBorder += "---";
         System.out.println(topBorder);
         //Get row we are printing (there are 4) to reduce graph and make it easier to send to helper function
-        DrawRow(currBoard.playerABoard.backRow, true);
-        DrawRow(currBoard.playerABoard.frontRow, true);
-        DrawRow(currBoard.playerBBoard.frontRow, false);
-        DrawRow(currBoard.playerBBoard.backRow, false);
+        DrawRow(currBoard.getPlayerABoard().backRow, true);
+        DrawRow(currBoard.getPlayerABoard().frontRow, true);
+        DrawRow(currBoard.getPlayerBBoard().frontRow, false);
+        DrawRow(currBoard.getPlayerBBoard().backRow, false);
 
     }
 

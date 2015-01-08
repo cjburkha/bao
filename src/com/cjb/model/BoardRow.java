@@ -15,7 +15,7 @@ public class BoardRow {
 
 
 
-    boolean FrontRow;
+    private boolean FrontRow;
 
     public BoardPit Pits[] = new BoardPit[8];
 
@@ -23,14 +23,14 @@ public class BoardRow {
     //Each row is position or direction agnostic. that way each pit can tell if it is the nyumba
     //Makes printing and comparing a bit harder, but it is more accurate.
     //Pass in beginnerVariant as that is a game trait, or board trait, not a row trait.
-    //Bao la kujifunza is beginners bao. All seeds are placed equally
-    public BoardRow(boolean frontRow, boolean beginnerVariant) {
+    //Bao la kiswahili is advanced bao.
+    // in Beginner bao (kujifunza) All seeds are placed equally
+    public BoardRow(boolean frontRow, boolean kiswahili) {
         FrontRow = frontRow;
         for (int i = 0; i<8; i++) {
             Pits[i] = new BoardPit(this.FrontRow, i);
-            if (beginnerVariant)
-                Pits[i].setStones(2);
-            else //kiswahili. 6 in nyumba and 2 in the next two right
+            //kiswahili. 6 in nyumba and 2 in the next two right
+            if (kiswahili)
             {
                 if (this.FrontRow)
                 {
@@ -40,6 +40,9 @@ public class BoardRow {
                         Pits[i].setStones(2);
                 }
             }
+
+            else
+                Pits[i].setStones(2);
         }
     }
 
