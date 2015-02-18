@@ -48,9 +48,6 @@ public class BoardPit {
     //xOxxxxOx
     boolean isKimbi;
 
-
-
-
     public BoardPit(boolean isNyumba, boolean isKichwa, boolean isKimbi) {
         this.isKichwa = isKichwa;
         this.isKimbi = isKimbi;
